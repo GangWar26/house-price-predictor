@@ -1,20 +1,11 @@
-<<<<<<< HEAD
 {
   "version": 2,
   "builds": [
-    { "src": "backend/app.py", "use": "@vercel/python" }
+    { "src": "backend/app.py", "use": "@vercel/python" },
+    { "src": "frontend/index.html", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "backend/app.py" }
+    { "src": "/api/(.*)", "dest": "backend/app.py" },
+    { "src": "/(.*)", "dest": "frontend/index.html" }
   ]
-=======
-{
-  "version": 2,
-  "builds": [
-    { "src": "backend/app.py", "use": "@vercel/python" }
-  ],
-  "routes": [
-    { "src": "/(.*)", "dest": "backend/app.py" }
-  ]
->>>>>>> 51ed7cab9e02f5b9635531bd51df18b0c04ee92b
 }

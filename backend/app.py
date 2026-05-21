@@ -39,12 +39,12 @@ def home():
     return jsonify({"status": "ok", "message": "House Price Prediction API"})
 
 
-@app.route("/locations", methods=["GET"])
+@app.route("/api/locations", methods=["GET"])
 def get_locations():
     return jsonify({"locations": LOCATIONS})
 
 
-@app.route("/predict", methods=["POST", "OPTIONS"])
+@app.route("/api/predict", methods=["POST", "OPTIONS"])
 def predict():
     if request.method == "OPTIONS":
         return jsonify({}), 200
